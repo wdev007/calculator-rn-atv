@@ -12,9 +12,15 @@ const Main = () => {
   const [total, setTotal] = useState("");
 
   const handleValue = (value: string) => {
-    if (!Number(value) && !validCharacters.includes(value)) return;
+    if (!Number(value) && !validCharacters.includes(value) && value !== "0")
+      return;
 
     if (value === "C") {
+      setValueToCalc((prevState) => prevState.slice(0, -1));
+      return;
+    }
+
+    if (value === "AC") {
       setValueToCalc("");
       setTotal("");
       return;
@@ -36,7 +42,9 @@ const Main = () => {
     }
     setValueToCalc(
       (prevState) =>
-        `${prevState}${Number(value) || value === "." ? value : `  ${value}  `}`
+        `${prevState}${
+          Number(value) || [".", "0"].includes(value) ? value : `  ${value}  `
+        }`
     );
   };
 
