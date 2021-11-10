@@ -10,10 +10,10 @@ export const customStyles = (type: "basic" | "number" | "complex") => {
   } else {
     color = colors.white;
   }
-  console.log("");
+
   return StyleSheet.create({
     container: {
-      width: 85,
+      width: "22%",
       height: 65,
       borderRadius: 10,
       alignItems: "center",
@@ -25,23 +25,3 @@ export const customStyles = (type: "basic" | "number" | "complex") => {
     },
   });
 };
-export const styles = StyleSheet.create({
-  container: {
-    width: 85,
-    height: 65,
-    borderRadius: 10,
-    alignItems: "center",
-    backgroundColor: colors.primaryBgColor,
-    justifyContent: "center",
-    fontSize: 28,
-  },
-  basic: {
-    color: colors.buttonSecundary,
-  },
-  number: {
-    color: colors.white,
-  },
-  complex: {
-    color: colors.buttonPrimary,
-  },
-});

@@ -18,3 +18,7 @@ export const validCharacters = [
   "C",
   ".",
 ];
+
+export const mapCharacters: { [key: string]: string } = {
+  X: "*",
+};
