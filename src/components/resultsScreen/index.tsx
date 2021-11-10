@@ -1,11 +1,15 @@
-import React from "react";
+import React, { FC } from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 
-const ResultsScreen = () => {
+interface IProps {
+  value: string;
+}
+
+const ResultsScreen: FC<IProps> = ({ value }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>1342,56</Text>
+      <Text style={styles.text}>{value}</Text>
     </View>
   );
 };

@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    fontSize: 22,
+    fontSize: 35,
+    fontWeight: "900",
     color: colors.white,
   },
 });

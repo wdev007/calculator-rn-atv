@@ -1,15 +1,19 @@
 import React, { FC } from "react";
-import { TouchableOpacity, View } from "react-native";
-import { styles } from "./styles";
+import { TouchableOpacity } from "react-native";
+import { customStyles } from "./styles";
 
 interface IProps {
   text: string;
-  handleClick: () => void;
+  handleClick: (value: string) => void;
+  type: "basic" | "number" | "complex";
 }
 
-const AppButton: FC<IProps> = ({ text, handleClick }) => {
+const AppButton: FC<IProps> = ({ text, handleClick, type }) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={handleClick}>
+    <TouchableOpacity
+      style={customStyles(type).container as any}
+      onPress={() => handleClick(text)}
+    >
       {text}
     </TouchableOpacity>
   );
