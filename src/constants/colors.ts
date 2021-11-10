@@ -5,20 +5,3 @@ export const colors = {
   buttonSecundary: "#aa6f74",
   white: "#fcfeff",
 };
-
-export const validCharacters = [
-  "AC",
-  "+/-",
-  "%",
-  "/",
-  "X",
-  "-",
-  "+",
-  "=",
-  "C",
-  ".",
-];
-
-export const mapCharacters: { [key: string]: string } = {
-  X: "*",
-};

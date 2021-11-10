@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { TouchableOpacity } from "react-native";
+
 import { customStyles } from "./styles";
 
 interface IProps {

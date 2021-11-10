@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { View } from "react-native";
+
 import Keyboard from "../../components/keyboard";
 import ResultsScreen from "../../components/resultsScreen";
-import { mapCharacters, validCharacters } from "../../constants/colors";
+import { mapCharacters, validCharacters } from "../../constants/characters";
+
 import { styles } from "./styles";
 
 const Main = () => {
